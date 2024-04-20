@@ -1,4 +1,4 @@
-# React WP Shortcode App
+# React WP Shortcode App (wip)
 
 React WP Shortcode App is an extended version of the [React WP Shortcode Boilerplate](https://github.com/tonyfarha/react-wp-shortcode-boilerplate) plugin. It enables easy integration and rendering of a React application within any post or page through a straightforward shortcode. Built on @wordpress/scripts, it offers a streamlined development and build workflow perfect for custom projects.
 
