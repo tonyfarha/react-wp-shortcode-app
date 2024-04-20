@@ -9,7 +9,7 @@
 function dbt_render_react_wp_shortcode_app($atts) {
 
 	$idPrefix = "dbt-react-wp-shortcode-app";
-	$randomNum = rand(0, 100);
+	$randomNum = rand(0, 9999);
 
 	$atts = shortcode_atts(
 		[
@@ -20,21 +20,21 @@ function dbt_render_react_wp_shortcode_app($atts) {
 		'react_wp_shortcode_app'
 	);
 
-	$escapedID = esc_attr($atts['id']);
+	$id = esc_attr($atts['id']);
 	$app = esc_attr($atts['app']);
-	$containerID = $idPrefix . '-' . $escapedID;
+	$appID = $idPrefix . '-' . $app . '-' . $id;
 
-	wp_enqueue_script("dbt-react-wp-shortcode-app-$escapedID", plugins_url('/build/index.js', __FILE__), array('wp-element'), time(), true);
-	wp_enqueue_style('dbt-react-wp-shortcode-app-style', plugins_url('/build/style-index.css', __FILE__), array(), time());
+	wp_enqueue_script("$appID-script", plugins_url('/build/index.js', __FILE__), array('wp-element'), time(), true);
+	wp_enqueue_style("$appID-style", plugins_url('/build/style-index.css', __FILE__), array(), time());
 
 	$data_to_pass_to_js = [
-		'containerID' => $containerID,
+		'containerID' => $appID,
 		'app' => $app
 	];
 
-	wp_localize_script("dbt-react-wp-shortcode-app-$escapedID", 'pluginData', $data_to_pass_to_js);
+	wp_localize_script("$appID-script", 'pluginData', $data_to_pass_to_js);
 
-	return '<div id="' . $containerID . '"></div>';
+	return '<div id="' . $appID . '"></div>';
 }
 
 add_shortcode('react_wp_shortcode_app', 'dbt_render_react_wp_shortcode_app');
