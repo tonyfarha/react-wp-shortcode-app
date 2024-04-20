@@ -63,5 +63,6 @@ To create a new React app, follow these steps:
 5. Remove unnecessary files and code from the `src/Apps/MyApp` directory and `src/Apps/MyApp/components` directory.
 6. Adjust the export statement in the `src/Apps/MyApp/index.js` file to match your new app name (e.g., `export { App as MyApp } from './App';`).
 7. Add `export * from './MyApp';` to the `src/Apps/index.js` file.
-8. Run `npm run build` to compile your changes.
-9. Use the `[react_wp_shortcode_app app="MyApp"]` shortcode to load your new React app.
+8. Import your new app in the `src/index.jsx` file and add it to the `apps` object.
+9. Run `npm run build` to compile your changes.
+10. Use the `[react_wp_shortcode_app app="MyApp"]` shortcode to load your new React app.
