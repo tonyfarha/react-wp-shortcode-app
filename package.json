@@ -5,7 +5,7 @@
   "scripts": {
     "start": "wp-scripts start",
     "build": "wp-scripts build",
-    "generate-component": "node scripts/generate-component.js"
+    "generate-app": "node scripts/generate-app.js"
   },
   "author": "Tony Farha (https://github.com/tonyfarha)",
   "license": "MIT",

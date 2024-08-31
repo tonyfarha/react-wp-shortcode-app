@@ -56,14 +56,14 @@ You can customize the React app by editing the files in the `src` folder. After 
 
 To create a new React app, follow these steps:
 
-1. Run the script below, replacing `[ComponentName]` with the desired name for your component:
+1. Run the script below, replacing `[AppName]` with the desired name for your app:
 
 ```bash
-npm run generate-component [ComponentName]
+npm run generate-app [AppName]
 ```
 
-2. To load your newly created React app, use the following shortcode, replacing [ComponentName] with the name of your component:
+2. To load your newly created React app, use the following shortcode, replacing [AppName] with the name of your app:
 
 ```bash
-[react_wp_shortcode_app app="[ComponentName]"]
+[react_wp_shortcode_app app="[AppName]"]
 ```
