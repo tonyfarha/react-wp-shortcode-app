@@ -56,13 +56,14 @@ You can customize the React app by editing the files in the `src` folder. After 
 
 To create a new React app, follow these steps:
 
-1. Duplicate the `src/Apps/HelloWorld` directory and rename it to your app name (e.g., `MyApp`).
-2. Adjust the `src/Apps/MyApp/App.jsx` file to define your React component.
-3. Change the id attribute on the root element of your React component.
-4. Adjust the id in `src/Apps/MyApp/style.scss` to match the id of the root element of your React component.
-5. Remove unnecessary files and code from the `src/Apps/MyApp` directory and `src/Apps/MyApp/components` directory.
-6. Adjust the export statement in the `src/Apps/MyApp/index.js` file to match your new app name (e.g., `export { App as MyApp } from './App';`).
-7. Add `export * from './MyApp';` to the `src/Apps/index.js` file.
-8. Import your new app in the `src/index.jsx` file and add it to the `apps` object.
-9. Run `npm run build` to compile your changes.
-10. Use the `[react_wp_shortcode_app app="MyApp"]` shortcode to load your new React app.
+1. Run the script below, replacing `[ComponentName]` with the desired name for your component:
+
+```bash
+npm run generate-component [ComponentName]
+```
+
+2. To load your newly created React app, use the following shortcode, replacing [ComponentName] with the name of your component:
+
+```bash
+[react_wp_shortcode_app app="[ComponentName]"]
+```
