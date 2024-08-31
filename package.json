@@ -4,11 +4,13 @@
   "description": "A simple plugin to render a React app via a shortcode",
   "scripts": {
     "start": "wp-scripts start",
-    "build": "wp-scripts build"
+    "build": "wp-scripts build",
+    "generate-app": "node scripts/generate-app.js"
   },
   "author": "Tony Farha (https://github.com/tonyfarha)",
   "license": "MIT",
   "devDependencies": {
-    "@wordpress/scripts": "^27.5.0"
+    "@wordpress/scripts": "^27.5.0",
+    "prettier": "^3.3.3"
   }
 }
